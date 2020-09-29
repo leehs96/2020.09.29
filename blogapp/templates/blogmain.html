@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<br/>
+
+{% for blog in blogs %}
+<main role="main" class="container">
+  <div class="jumbotron">
+    <h1>멋쟁이사자처럼 HUFS</h1>
+    <h1>제목 : {{ blog.title }} </h1>
+    <br/>
+    <h4>작성일 : {{ blog.pub_date }} </h4>
+    <br/>
+    <p class='lead'>{{ blog.body | safe }} </p>
+    <br/>
+    <p class="lead">CKEditor를 위한 블로그 홈</p>
+    <a
+      class="btn btn-lg btn-primary"
+      href="{{ site.baseurl }}/docs/{{ site.docs_version }}/components/navbar/"
+      role="button"
+      >Button Click &raquo;</a
+    >
+  </div>
+</main>
+{% endfor %}
+
+{% endblock %}
