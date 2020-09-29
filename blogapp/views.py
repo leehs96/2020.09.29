@@ -17,7 +17,7 @@ def createBlog(request):
  
         if form.is_valid():
             form.save()
-            return redirect('blogMain')
+            return redirect('blogmain')
         else:
             return redirect('index')
     else:
